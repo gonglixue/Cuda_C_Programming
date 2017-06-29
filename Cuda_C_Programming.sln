@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CheckDimension", "CheckDimension\CheckDimension.vcxproj", "{97EBBDF4-A14A-4E56-AB25-898769FE7A52}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample", "CheckDimension\CheckDimension.vcxproj", "{97EBBDF4-A14A-4E56-AB25-898769FE7A52}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SumArrays", "SumArrays\SumArrays.vcxproj", "{A021E2E5-A51A-4A28-82BC-71F82A828CAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{97EBBDF4-A14A-4E56-AB25-898769FE7A52}.Release|x64.Build.0 = Release|x64
 		{97EBBDF4-A14A-4E56-AB25-898769FE7A52}.Release|x86.ActiveCfg = Release|Win32
 		{97EBBDF4-A14A-4E56-AB25-898769FE7A52}.Release|x86.Build.0 = Release|Win32
+		{A021E2E5-A51A-4A28-82BC-71F82A828CAA}.Debug|x64.ActiveCfg = Debug|x64
+		{A021E2E5-A51A-4A28-82BC-71F82A828CAA}.Debug|x64.Build.0 = Debug|x64
+		{A021E2E5-A51A-4A28-82BC-71F82A828CAA}.Debug|x86.ActiveCfg = Debug|Win32
+		{A021E2E5-A51A-4A28-82BC-71F82A828CAA}.Debug|x86.Build.0 = Debug|Win32
+		{A021E2E5-A51A-4A28-82BC-71F82A828CAA}.Release|x64.ActiveCfg = Release|x64
+		{A021E2E5-A51A-4A28-82BC-71F82A828CAA}.Release|x64.Build.0 = Release|x64
+		{A021E2E5-A51A-4A28-82BC-71F82A828CAA}.Release|x86.ActiveCfg = Release|Win32
+		{A021E2E5-A51A-4A28-82BC-71F82A828CAA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

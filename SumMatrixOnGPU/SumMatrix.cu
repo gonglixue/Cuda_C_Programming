@@ -46,7 +46,7 @@ __global__ void printThreadIndex(int *A, const int nx, const int ny)
 		blockIdx.y, ix, iy, idx, A[idx]);
 }
 
-__global__ void sumMatrixOnGPU2D(float *MatA, float *MatB, float *MatC, int nx, int ny)
+__global__ void sumMatrixOnGPU2D(int *MatA, int *MatB, int *MatC, int nx, int ny)
 {
 	unsigned int ix = threadIdx.x + blockIdx.x * blockDim.x;
 	unsigned int iy = threadIdx.y + blockIdx.y * blockDim.y;
@@ -61,7 +61,7 @@ void sumMatrixOnHost(int* h_A, int* h_B, int *hostRef, int nx, int ny)
 	{
 		for (int iy = 0; iy < ny; iy++)
 		{
-			int ind = iy * nx + iy;
+			int ind = iy * nx + ix;
 			hostRef[ind] = h_A[ind] + h_B[ind];
 		}
 	}
@@ -97,7 +97,7 @@ int main(int argc, char**argv)
 	int nx = 1<<14;
 	int ny = 1<<14;
 	int nxy = nx*ny;
-	int nBytes = nxy * sizeof(float);
+	int nBytes = nxy * sizeof(int);
 
 	// malloc host memory
 	int *h_A, *h_B, *hostRef, *gpuRef;
@@ -116,7 +116,7 @@ int main(int argc, char**argv)
 	sumMatrixOnHost(h_A, h_B, hostRef, nx, ny);
 
 	// malloc device global memory
-	float *d_MatA, *d_MatB, *d_MatC;
+	int *d_MatA, *d_MatB, *d_MatC;
 	cudaMalloc((void**)&d_MatA, nBytes);
 	cudaMalloc((void**)&d_MatB, nBytes);	
 	cudaMalloc((void**)&d_MatC, nBytes);
